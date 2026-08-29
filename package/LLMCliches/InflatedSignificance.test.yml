@@ -1,0 +1,11 @@
+- name: flags canned significance claims
+  rule: InflatedSignificance.yml
+  input: The station stands as a testament to progress and plays a pivotal role in commerce.
+  want: |
+    1:13:LLMCliches.InflatedSignificance:Replace the inflated significance claim 'stands as a testament' with concrete facts.
+    1:51:LLMCliches.InflatedSignificance:Replace the inflated significance claim 'plays a pivotal role' with concrete facts.
+
+- name: accepts factual significance
+  rule: InflatedSignificance.yml
+  input: The station handles 40 percent of the region's freight.
+  want: ""

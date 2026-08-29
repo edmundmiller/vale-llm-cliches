@@ -1,0 +1,10 @@
+- name: flags a didactic lead-in
+  rule: DidacticHedging.yml
+  input: It is important to note that the cache expires after one hour.
+  want: |
+    1:1:LLMCliches.DidacticHedging:Remove the didactic lead-in 'It is important to note that' and state the point directly.
+
+- name: accepts a direct statement
+  rule: DidacticHedging.yml
+  input: The cache expires after one hour.
+  want: ""

@@ -1,0 +1,11 @@
+extends: existence
+message: "Replace the inflated significance claim '%s' with concrete facts."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Undue_emphasis_on_significance,_legacy,_and_broader_trends
+level: warning
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - '\b(?:stand|stands|stood|serve|serves|served|standing|serving)\s+as\s+(?:a|an)\s+(?:[a-z]+\s+)?(?:testament|reminder)\b'
+  - '\b(?:is|was|are|were|remain|remains)\s+a\s+(?:[a-z]+\s+)?testament\s+to\b'
+  - '\bplay(?:s|ed|ing)?\s+(?:a|an)\s+(?:[a-z]+\s+)?(?:crucial|pivotal|vital|key|significant|central|critical|important)\s+role\b'

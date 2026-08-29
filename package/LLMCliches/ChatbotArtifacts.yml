@@ -1,0 +1,13 @@
+extends: existence
+message: "Remove the chatbot artifact '%s'."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+level: error
+ignorecase: true
+nonword: true
+scope: raw
+tokens:
+  - '\bas\s+an\s+ai(?:\s+language)?\s+model\b'
+  - '\bas\s+of\s+my\s+last\s+(?:update|training)\b'
+  - '\bknowledge\s+cutoff\b'
+  - 'contentReference|oaicite|turn0(?:search|news|image)[0-9]*|attributableIndex'
+  - 'utm_source='

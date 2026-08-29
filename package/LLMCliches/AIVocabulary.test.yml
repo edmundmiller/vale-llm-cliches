@@ -1,0 +1,19 @@
+- name: flags AI-associated vocabulary without case sensitivity
+  rule: AIVocabulary.yml
+  input: The vibrant district offers a seamless experience.
+  want: |
+    1:5:LLMCliches.AIVocabulary:Consider replacing the AI-associated word 'vibrant' with more specific language.
+    1:31:LLMCliches.AIVocabulary:Consider replacing the AI-associated word 'seamless' with more specific language.
+
+- name: accepts specific language
+  rule: AIVocabulary.yml
+  input: The district has twelve shops connected by a covered walkway.
+  want: ""
+
+- name: ignores Markdown code
+  rule: AIVocabulary.yml
+  input: |
+    `delve into the tapestry`
+
+    The report examines the evidence.
+  want: ""

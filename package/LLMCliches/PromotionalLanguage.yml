@@ -1,0 +1,15 @@
+extends: existence
+message: "Replace the promotional phrase '%s' with a specific description."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Promotional_and_advertisement-like_language
+level: suggestion
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - '\bnestled\s+(?:in|on|among|between|along|at)\b'
+  - '\bin\s+the\s+heart\s+of\b'
+  - '\brich\s+(?:cultural\s+|historical\s+)?(?:heritage|history|tapestry)\b'
+  - '\bhidden\s+gem\b'
+  - '\bmust-(?:visit|see|try)\b'
+  - '\bbreathtaking\b'
+  - '\bstunning\s+(?:views?|scenery|architecture|backdrop)\b'

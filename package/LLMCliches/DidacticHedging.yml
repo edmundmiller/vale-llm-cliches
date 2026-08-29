@@ -1,0 +1,10 @@
+extends: existence
+message: "Remove the didactic lead-in '%s' and state the point directly."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+level: warning
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - "\\bit(?:['’]s|\\s+(?:is|was))\\s+(?:also\\s+)?(?:important|worth|crucial|essential|vital)\\s+(?:to\\s+(?:note|remember|understand|recognize|mention|consider)|noting|mentioning|remembering|considering)\\b(?:\\s+that\\b)?"
+  - '\bit\s+should\s+be\s+noted\b'

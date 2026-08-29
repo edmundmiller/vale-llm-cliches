@@ -1,0 +1,10 @@
+- name: flags negative parallelism
+  rule: NegativeParallelism.yml
+  input: The change affects not only speed but also reliability.
+  want: |
+    1:20:LLMCliches.NegativeParallelism:Consider stating the contrast directly instead of using 'not only speed but also'.
+
+- name: accepts a direct conjunction
+  rule: NegativeParallelism.yml
+  input: The change affects speed and reliability.
+  want: ""

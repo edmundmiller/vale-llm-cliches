@@ -1,0 +1,9 @@
+extends: existence
+message: "Review the superficial analysis appended with '%s'."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Superficial_analyses
+level: suggestion
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - ',\s+(?:highlighting|underscoring|emphasizing|showcasing|reflecting|demonstrating|illustrating|signaling|solidifying|cementing|reinforcing|underlining)\s+(?:its|his|her|their|our|the|a|an|how|that|what|both)\b[^.!?]*'

@@ -1,0 +1,10 @@
+- name: flags unnamed authorities
+  rule: VagueAttribution.yml
+  input: Some experts have argued that demand will rise.
+  want: |
+    1:1:LLMCliches.VagueAttribution:Name a source instead of using the vague attribution 'Some experts have argued'.
+
+- name: accepts named attribution
+  rule: VagueAttribution.yml
+  input: The 2025 census projects that demand will rise.
+  want: ""

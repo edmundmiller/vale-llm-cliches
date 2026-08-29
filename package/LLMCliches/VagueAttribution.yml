@@ -1,0 +1,10 @@
+extends: existence
+message: "Name a source instead of using the vague attribution '%s'."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Canned_emphasis_on_notability,_attribution,_and_media_coverage
+level: warning
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - '\b(?:many|some|several|most|numerous)?\s*(?:experts|critics|observers|scholars|analysts|commentators)\s+(?:have\s+|often\s+|widely\s+)?(?:argu(?:e|es|ed)|not(?:e|es|ed)|suggest(?:s|ed)?|believ(?:e|es|ed)|contend(?:s|ed)?|observ(?:e|es|ed)|claim(?:s|ed)?)\b'
+  - '\bindustry\s+reports?\s+(?:suggest|indicate|show)[a-z]*\b'

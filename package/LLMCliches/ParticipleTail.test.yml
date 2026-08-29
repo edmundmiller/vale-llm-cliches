@@ -1,0 +1,10 @@
+- name: flags a superficial participle tail
+  rule: ParticipleTail.yml
+  input: The bridge reopened in June, highlighting the city's investment in infrastructure.
+  want: |
+    1:28:LLMCliches.ParticipleTail:Review the superficial analysis appended with ', highlighting the city's investment in infrastructure'.
+
+- name: accepts highlighting as the main action
+  rule: ParticipleTail.yml
+  input: She kept highlighting passages in yellow.
+  want: ""

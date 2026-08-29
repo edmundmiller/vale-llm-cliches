@@ -1,0 +1,17 @@
+- name: flags chatbot artifacts
+  rule: ChatbotArtifacts.yml
+  input: As an AI language model, I have a knowledge cutoff.
+  want: |
+    1:1:LLMCliches.ChatbotArtifacts:Remove the chatbot artifact 'As an AI language model'.
+    1:35:LLMCliches.ChatbotArtifacts:Remove the chatbot artifact 'knowledge cutoff'.
+
+- name: flags pasted citation debris
+  rule: ChatbotArtifacts.yml
+  input: The source says this. cite turn0search3
+  want: |
+    1:28:LLMCliches.ChatbotArtifacts:Remove the chatbot artifact 'turn0search3'.
+
+- name: accepts ordinary model discussion
+  rule: ChatbotArtifacts.yml
+  input: The model was trained on documents published before 2024.
+  want: ""

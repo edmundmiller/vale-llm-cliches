@@ -1,0 +1,9 @@
+extends: existence
+message: "Consider stating the contrast directly instead of using '%s'."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Negative_parallelisms
+level: suggestion
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - '\bnot\s+(?:just|only|merely|simply)\s+[^.!?;]*?\bbut(?:\s+also)?\b'

@@ -1,0 +1,12 @@
+- name: flags promotional language
+  rule: PromotionalLanguage.yml
+  input: Nestled in the hills, the hidden gem offers breathtaking scenery.
+  want: |
+    1:1:LLMCliches.PromotionalLanguage:Replace the promotional phrase 'Nestled in' with a specific description.
+    1:27:LLMCliches.PromotionalLanguage:Replace the promotional phrase 'hidden gem' with a specific description.
+    1:45:LLMCliches.PromotionalLanguage:Replace the promotional phrase 'breathtaking' with a specific description.
+
+- name: accepts a specific description
+  rule: PromotionalLanguage.yml
+  input: The village is 12 kilometers north of Bath and has 340 residents.
+  want: ""

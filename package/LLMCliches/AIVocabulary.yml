@@ -1,0 +1,9 @@
+extends: existence
+message: "Consider replacing the AI-associated word '%s' with more specific language."
+link: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Language_and_grammar
+level: suggestion
+ignorecase: true
+nonword: true
+scope: sentence
+tokens:
+  - '\b(?:delv(?:e|es|ed|ing)|tapestr(?:y|ies)|meticulous(?:ly)?|pivotal|intricate(?:ly)?|intricacies|interplay|underscor(?:e|es|ed|ing)|garner(?:s|ed|ing)?|bolster(?:s|ed|ing)?|vibrant|bustling|multifaceted|seamless(?:ly)?|ever-evolving)\b'
